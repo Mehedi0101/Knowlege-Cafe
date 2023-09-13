@@ -2,14 +2,25 @@ import Proptypes from 'prop-types';
 import { useState } from 'react';
 import { BsFillBookmarksFill } from 'react-icons/bs';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, bookmarked, setBookmarked, spentTime, setSpentTime }) => {
 
     const { cover_Img, author_Name, author_Img, read_Time, title, hashtags, posted_Date } = blog;
 
     const [buttonStatus, setButtonStatus] = useState(false);
 
-    const handleBookmark = btnStatus => setButtonStatus(!btnStatus);
-    const handleMarkAsRead = () => setButtonStatus(false);
+    const handleBookmark = btnStatus => {
+        setButtonStatus(!btnStatus);
+        btnStatus || setBookmarked([...bookmarked, blog]);
+        btnStatus && setBookmarked( bookmarked.filter( bookmark => bookmark.id !== blog.id));
+    };
+
+    const handleMarkAsRead = () => {
+        if(buttonStatus){
+            setSpentTime(spentTime+blog.read_Time);
+            setButtonStatus(false);
+            setBookmarked( bookmarked.filter( bookmark => bookmark.id !== blog.id));
+        }
+    }
 
     return (
         <div className='mb-14'>
@@ -35,7 +46,7 @@ const Blog = ({ blog }) => {
 
             <h2 className='text-3xl font-bold mt-2'>{title}</h2>
 
-            <div className='flex mt-5 gap-3 text-[#11111199] font-semibold'>
+            <div className='flex flex-wrap mt-5 gap-3 text-[#11111199] font-semibold'>
                 {
                     hashtags.map((tag, index) => <p key={index}>#{tag}</p>)
                 }
@@ -48,7 +59,11 @@ const Blog = ({ blog }) => {
 };
 
 Blog.propTypes = {
-    blog: Proptypes.object.isRequired
+    blog: Proptypes.object.isRequired,
+    bookmarked: Proptypes.array.isRequired,
+    setBookmarked: Proptypes.func.isRequired,
+    spentTime: Proptypes.number.isRequired,
+    setSpentTime: Proptypes.func.isRequired
 }
 
 
