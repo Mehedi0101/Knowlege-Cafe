@@ -1,9 +1,9 @@
 [
     {
       "id": 1,
-      "cover_Img": "../src/assets/1.jpg",
+      "cover_Img": "assets/1.jpg",
       "author_Name": "John Doe",
-      "author_Img": "../src/assets/boy1.png",
+      "author_Img": "assets/boy1.png",
       "read_Time": 10,
       "title": "Exploring the Power of ES6 Features",
       "hashtags": ["ES6", "JavaScript", "coding"],
@@ -11,9 +11,9 @@
     },
     {
       "id": 2,
-      "cover_Img": "../src/assets/2.png",
+      "cover_Img": "assets/2.png",
       "author_Name": "Jane Smith",
-      "author_Img": "../src/assets/girl1.jpg",
+      "author_Img": "assets/girl1.jpg",
       "read_Time": 8,
       "title": "Mastering the Art of Programming",
       "hashtags": ["programming", "coding", "development"],
@@ -21,9 +21,9 @@
     },
     {
       "id": 3,
-      "cover_Img": "../src/assets/3.png",
+      "cover_Img": "assets/3.png",
       "author_Name": "David Johnson",
-      "author_Img": "../src/assets/boy2.png",
+      "author_Img": "assets/boy2.png",
       "read_Time": 15,
       "title": "Building Dynamic Web Apps with React",
       "hashtags": ["React", "web development", "frontend"],
@@ -31,9 +31,9 @@
     },
     {
       "id": 4,
-      "cover_Img": "../src/assets/4.jpg",
+      "cover_Img": "assets/4.jpg",
       "author_Name": "Emily Brown",
-      "author_Img": "../src/assets/girl2.jpg",
+      "author_Img": "assets/girl2.jpg",
       "read_Time": 5,
       "title": "Discovering the Best Free Resources for Developers",
       "hashtags": ["free resources", "development", "tools"],

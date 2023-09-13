@@ -7,7 +7,7 @@ const Blogs = ({bookmarked, setBookmarked, spentTime, setSpentTime}) => {
 
     useEffect( () => {
         const fetchBlogs = async() => {
-            const response = await fetch('../../public/blogs.json');
+            const response = await fetch('blogs.json');
             const data = await response.json();
             setblogs(data);
         }
