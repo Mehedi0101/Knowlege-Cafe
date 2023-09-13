@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "cover_Img": "../src/assets/1.jpg",
       "author_Name": "John Doe",
       "author_Img": "../src/assets/boy1.png",
@@ -9,6 +10,7 @@
       "posted_Date": "13 September, 2023"
     },
     {
+      "id": 2,
       "cover_Img": "../src/assets/2.png",
       "author_Name": "Jane Smith",
       "author_Img": "../src/assets/girl1.jpg",
@@ -18,6 +20,7 @@
       "posted_Date": "12 September, 2023"
     },
     {
+      "id": 3,
       "cover_Img": "../src/assets/3.png",
       "author_Name": "David Johnson",
       "author_Img": "../src/assets/boy2.png",
@@ -27,6 +30,7 @@
       "posted_Date": "11 September, 2023"
     },
     {
+      "id": 4,
       "cover_Img": "../src/assets/4.jpg",
       "author_Name": "Emily Brown",
       "author_Img": "../src/assets/girl2.jpg",
